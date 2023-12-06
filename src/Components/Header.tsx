@@ -16,7 +16,7 @@ const Nav = styled(motion.nav)`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 130px;
+  height: 110px;
   position: fixed;
   top: 0;
   background-color: ${props => props.theme.gray};
@@ -30,8 +30,8 @@ const Nav = styled(motion.nav)`
 `;
 
 const Col = styled.div`
-  width: 1200px;
-  min-width: 1200px;
+  width: 1000px;
+  min-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;

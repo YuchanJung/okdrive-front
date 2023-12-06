@@ -5,7 +5,10 @@ declare module "styled-components" {
   export interface DefaultTheme {
     red: string;
     gray: string; // header color
-    indigo: string; // logo color
+    indigo: {
+      basic: string;
+      lighter: string;
+    }; // logo color
     black: {
       veryDark: string;
       darker: string;

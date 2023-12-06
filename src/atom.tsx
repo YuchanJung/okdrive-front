@@ -1,13 +1,43 @@
 import { atom } from "recoil";
-import { IImage } from "./api"; 
+import { IImage } from "./api";
 
 export const allImagesState = atom<IImage[]>({
-    default: [
-        {id: 1, url: "../Images/CE_test.jpeg", translated_caption: "dummy"},
-        {id: 1, url: "../Images/test4.jpg", translated_caption: "dummy"},
-        {id: 1, url: "../Images/test7.jpg", translated_caption: "dummy"},
-        {id: 1, url: "../Images/test5.jpg", translated_caption: "dummy"},
-        {id: 1, url: "../Images/hockey.jpg", translated_caption: "dummy"},
-    ],
-    key: "allImages",
-})
+  default: [
+    {
+      id: 1,
+      image: "Images/CE_test.jpeg",
+      caption: "dummy",
+      translated_caption: "dummy",
+      created_at: "",
+    },
+    {
+      id: 1,
+      image: "Images/test4.jpg",
+      caption: "dummy",
+      translated_caption: "dummy",
+      created_at: "",
+    },
+    {
+      id: 1,
+      image: "Images/test7.jpg",
+      caption: "dummy",
+      translated_caption: "dummy",
+      created_at: "",
+    },
+    {
+      id: 1,
+      image: "Images/test5.jpg",
+      caption: "dummy",
+      translated_caption: "dummy",
+      created_at: "",
+    },
+    {
+      id: 1,
+      image: "Images/hockey.jpg",
+      caption: "dummy",
+      translated_caption: "dummy",
+      created_at: "",
+    },
+  ],
+  key: "allImages",
+});

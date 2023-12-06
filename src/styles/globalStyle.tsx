@@ -22,6 +22,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  -ms-overflow-style: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -73,6 +74,10 @@ button {
   background-color: transparent;
   padding: 0;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
 `;
 
 export default GlobalStyle;
