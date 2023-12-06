@@ -51,7 +51,7 @@ const Button = styled.button`
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
   background-color: ${(props) => props.theme.indigo.lighter};
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 15px;
   opacity: 0.7;
   transition: 0.3s;
