@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   width: 1000px;
-  height: 400px;
+
   max-width: 1000px;
   margin: 20px auto;
   margin-top: 180px;
@@ -18,15 +18,15 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  margin-top: 15px;
+  margin-top: 40px;
   color: ${(props) => props.theme.gray};
   font-size: 42px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 `;
 
 const UploadForm = styled.form`
   width: 800px;
-  height: 180px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -78,6 +78,23 @@ const GenerateButton = styled.div`
   }
 `;
 
+const Display = styled.div`
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Image = styled.div``;
+
+const Caption = styled.div`
+  color: black;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
+
 const Footer = styled.footer`
   font-size: 18px;
   text-align: center;
@@ -91,17 +108,24 @@ const Footer = styled.footer`
 
 function Upload() {
   const [fileLog, setFileLog] = useState("No image selected.");
+  const [caption, setCaption] = useState("");
   return (
     <>
       <Wrapper>
         <Title>Image Captioning with AI </Title>
         <UploadForm action="" method="POST">
-            <InputButton>Choose an Image</InputButton>
-            <FileLog>{fileLog}</FileLog>
-            <GenerateButton>Generate Caption</GenerateButton>
+          <InputButton>Choose an Image</InputButton>
+          <FileLog>{fileLog}</FileLog>
+          <GenerateButton>Generate Caption</GenerateButton>
         </UploadForm>
       </Wrapper>
       <Footer>Return to Home</Footer>
+      {caption && (
+        <Display>
+          <Image></Image>
+          <Caption>{caption}</Caption>
+        </Display>
+      )}
     </>
   );
 }
